@@ -4,7 +4,6 @@ import Login from "./components/Login";
 import NavBar from "./components/NavBar";
 import Table from "./components/Table";
 import TopBar from "./components/TopBar";
-import Upload from "./components/Upload";
 import UploadCsv from "./components/UploadCsv";
 function App() {
   const [navOpen, setNavOpen] = useState(true);
@@ -16,11 +15,16 @@ function App() {
   }
 
   return (
-    <div className="App bg-[#FAFAFB] flex">
+    <div className="App bg-[#FAFAFB] relative sm:flex">
       <div
-        className={`sm:h-screen sm:bg-white ${navOpen ? "hidden" : "visible"}`}
+        className={`absolute z-10 h-full bg-white ${
+          navOpen ? "hidden" : "visible"
+        }`}
       >
         <NavBar closeNavBar={closeNavBarFunc}></NavBar>
+      </div>
+      <div className="max-sm:hidden sm:h-full sm:bg-white">
+        <NavBar></NavBar>
       </div>
       <div className="grow space-y-20">
         <TopBar openNavBar={openNavBarFunc}></TopBar>

@@ -1,6 +1,6 @@
 const NavBar = ({ closeNavBar }) => {
   return (
-    <div className="sm:h-screen w-screen sm:w-[218px]">
+    <div className="sm:h-screen w-screen sm:w-[218px] sm:bg-white">
       <div className="flex items-center justify-between p-5 ">
         {" "}
         <svg
