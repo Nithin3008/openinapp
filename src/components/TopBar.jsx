@@ -63,7 +63,9 @@ const TopBar = ({ openNavBar }) => {
           <img src="/Mask Group.png" alt="profile"></img>
         </div>
       </div>
-      <div className="bg-[#FAFAFB]  ml-11 font-medium">Upload CSV</div>
+      <div className="bg-[#FAFAFB]  ml-11 font-medium sm:w-full sm:text-xl">
+        Upload CSV
+      </div>
     </div>
   );
 };

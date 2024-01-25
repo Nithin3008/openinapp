@@ -46,7 +46,7 @@ const NavBar = ({ closeNavBar }) => {
         </svg>
       </div>
       <div
-        className=" flex flex-col gap-9 items-start p-6 ml-5 font-semibold ;
+        className=" flex flex-col gap-9 items-start pt-5 pl-12 font-semibold ;
 ]"
       >
         <div className="flex gap-5 text-lg items-center text-[#9A9AA9]">
@@ -68,7 +68,7 @@ const NavBar = ({ closeNavBar }) => {
           <span>Dashboard</span>
         </div>
         <div>
-          <div className="flex gap-5 text-lg items-center text-[#605BFF]  p-1">
+          <div className="flex bg-gradient-to-r from-[#ACA9FF]  gap-5 text-lg items-center text-[#605BFF]  p-1">
             <svg
               width="24"
               height="24"
