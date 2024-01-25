@@ -1,11 +1,13 @@
+import { useNavigate } from "react-router-dom";
 import DesktopLogo from "./DesktopLogo";
 import LightLogos from "./LightLogos";
 import Logos from "./Logos";
 
 const Login = () => {
+  const nav = useNavigate();
   return (
     <div className="h-screen sm:flex sm:items-center ">
-      <div className=" bg-[#605BFF] sm:bg-hero-pattern sm:bg-cover  flex items-center gap-1 space-x-2  h-[80px] sm:w-1/2 sm:flex-col sm:justify-between sm:items-center sm:gap-3  sm:h-screen ">
+      <div className=" max-sm:bg-[#605BFF] sm:bg-hero-pattern sm:bg-cover  flex items-center gap-1 space-x-2  h-[80px] sm:w-1/2 sm:flex-col sm:justify-between sm:items-center sm:gap-3  sm:h-screen ">
         <div className="self-start mt-9 ml-10 max-sm:hidden">
           <DesktopLogo></DesktopLogo>
         </div>
@@ -123,7 +125,10 @@ const Login = () => {
             <a href="#" className="text-blue-500">
               Forgot password?
             </a>
-            <button className="p-3 font-semibold  text-lg  text-white bg-[#605BFF]">
+            <button
+              onClick={() => nav("/Home")}
+              className="p-3 font-semibold  text-lg  text-white bg-[#605BFF]"
+            >
               Sign in
             </button>
           </div>

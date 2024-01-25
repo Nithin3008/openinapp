@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 const Table = () => {
   const data = [
     {
@@ -91,12 +93,13 @@ const Table = () => {
       selectedTags: ["Tag 1", "Tag 2", "Tag 3"],
     },
   ];
+
   return (
     <>
       <h1 className="sm:text-xl sm:font-semibold font-semibold ml-12 sm:ml-28">
         Uploads
       </h1>
-      <div className="h-[464px] sm:h-[497px] mb-10 w-[312px] sm:w-max mx-auto overflow-scroll sm:overflow-hidden rounded-md sm:p-4 bg-[#F5F5F5] ">
+      <div className=" h-[464px] sm:h-[497px] mb-10 w-[312px] sm:w-max mx-auto overflow-scroll sm:overflow-hidden rounded-md sm:p-4 bg-[#F5F5F5] ">
         <table className="bg-[#F5F5F5] border-spacing-y-5 border-separate sm:w-full  ">
           <thead className="p-4">
             <tr className="bg-[#F5F5F5]">

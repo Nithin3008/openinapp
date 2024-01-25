@@ -1,7 +1,6 @@
-import { useState } from "react";
+const UploadCsv = ({ tableShow, tableStatus }) => {
+  // const [uploadChecker, setUploadChecker] = useState(false);
 
-const UploadCsv = () => {
-  const [uploadChecker, setUploadChecker] = useState(false);
   return (
     <div className="bg-white rounded-md w-[328px] h-[352px] sm:w-[596px] sm:h[367px] m-auto mt-10 p-5 sm:flex sm:flex-col sm:items-center">
       <div className="p-4  flex flex-col items-center justify-center   w-[296px] h-[258px] sm:w-[546px] border-2 border-dotted border-[#9A9AA9] rounded-md">
@@ -81,11 +80,28 @@ const UploadCsv = () => {
             </defs>
           </svg>
           <p className="text-[#9A9AA9]">
-            Upload your excel sheet <span className="text-[#605BFF]">here</span>
+            {tableStatus ? (
+              <>
+                Update-template.xlsx{" "}
+                <p className="text-center text-red-500">Remove</p>
+              </>
+            ) : (
+              <>
+                Upload your excel sheet{" "}
+                <span className="text-[#605BFF]">here</span>
+              </>
+            )}
           </p>
         </div>
       </div>
-      <div className=" flex items-center justify-center gap-2 sm:w-[564px] bg-blue-500 w-[296px] h-[46px] text-lg text-white rounded-lg mt-5">
+      <div
+        onClick={() => {
+          tableShow();
+        }}
+        className={`${
+          tableStatus ? "opacity-5" : ""
+        } cursor-pointer flex items-center justify-center gap-2 sm:w-[564px] bg-blue-500 w-[296px] h-[46px] text-lg text-white rounded-lg mt-5`}
+      >
         <svg
           width="24"
           height="24"
